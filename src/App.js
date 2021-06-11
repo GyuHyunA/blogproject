@@ -1,23 +1,47 @@
+ /* eslint-disable */ //-> 이거 에러 없애는 기능임
+
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let posts = 'OH OH OH OH OH OH OH OH OH OH';
+  let pic1='https://t1.daumcdn.net/cfile/tistory/996C744F5B0753B01F';
+
+
+  // var[a,b] = [10, 100];
+  let[title, change_title] = useState(['울산', '서울', '부산', '대전']);
+  let[title2, change_title2] = useState('이건 머고?', '대전');
+  let[good, change_good] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          안녕하세요
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* 제목 */}
+      <div className="black-nav">
+        <h1> Dev blog </h1>
+      </div>
+      {/* 내용 */}
+      <div className="list">
+        <h2> { title[0] } <span onClick={()=>{change_good(good + 1)}}> Good👍 </span> {good} </h2> {/* 타이틀 state 변수 설정 방법 */}
+        <h4> 날짜 </h4>
+        <p> 21 05 06 발행</p>
+        <hr/>
+      </div>
+
+      <div className="list">
+        <h2>{ title[1] }</h2> {/* 타이틀 state 변수 설정 방법 */}
+        <h4> 날짜 </h4>
+        <p> 21 05 06 발행</p>
+        <hr/>
+      </div>
+
+      <div className="list">
+        <h2>{ title[2] }</h2> {/* 타이틀 state 변수 설정 방법 */}
+        <h4> 날짜 </h4>
+        <p> 21 05 06 발행</p>
+        <hr/>
+      </div>
     </div>
   );
 }
