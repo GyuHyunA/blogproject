@@ -11,10 +11,15 @@ function App() {
 
 
   // var[a,b] = [10, 100];
-  let[title, change_title] = useState(['울산', '서울', '부산', '대전']);
+  let[title, change_title] = useState(['울산', '서울', '부산']);
   let[title2, change_title2] = useState('이건 머고?', '대전');
   let[good, change_good] = useState(0);
 
+  function changefunc(){
+    let newArray = [...title];
+    newArray[0] = '대전';
+    change_title( newArray );
+  }
   return (
     <div>
       {/* 제목 */}
@@ -22,6 +27,7 @@ function App() {
         <h1> Dev blog </h1>
       </div>
       {/* 내용 */}
+      <button onClick={ changefunc }>버튼</button>
       <div className="list">
         <h2> { title[0] } <span onClick={()=>{change_good(good + 1)}}> Good👍 </span> {good} </h2> {/* 타이틀 state 변수 설정 방법 */}
         <h4> 날짜 </h4>
