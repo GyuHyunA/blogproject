@@ -7,10 +7,6 @@
   pointer-events: none;
 }
 
-body{
-  overflow: hidden;
-}
-
 .black-nav{
   background-color: black;
   width: 100%;
@@ -24,6 +20,14 @@ body{
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.modal{
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {

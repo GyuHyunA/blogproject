@@ -22,12 +22,13 @@ function App() {
   }
   return (
     <div>
+    
       {/* 제목 */}
       <div className="black-nav">
         <h1> Dev blog </h1>
       </div>
       {/* 내용 */}
-      <button onClick={ changefunc }>버튼</button>
+      {/* <button onClick={ changefunc }>버튼</button> */}
       <div className="list">
         <h2> { title[0] } <span onClick={()=>{change_good(good + 1)}}> Good👍 </span> {good} </h2> {/* 타이틀 state 변수 설정 방법 */}
         <h4> 날짜 </h4>
@@ -48,7 +49,23 @@ function App() {
         <p> 21 05 06 발행</p>
         <hr/>
       </div>
+
+      <Modal />
+
     </div>
+  );
+}
+
+
+function Modal(){
+  return(
+    <>
+    <div className="modal">
+      <h2>제목</h2>
+      <p> 날짜 </p>
+      <p>상세내용</p>
+    </div>
+    </>
   );
 }
 
